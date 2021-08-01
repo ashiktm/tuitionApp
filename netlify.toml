@@ -1,7 +1,7 @@
 [build]
-  publish = "dist/tuitionAPP"
+  publish = "dist/tuitionApp"
   command = "ng build --prod"
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status=200
