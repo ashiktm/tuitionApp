@@ -1,0 +1,64 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [ngClass]="{ hidden: !(isHandset$ | async) === true }"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['']" routerLinkActive="router-link-active"
+        >Home</a
+      >
+      <a
+        mat-list-item
+        [routerLink]="['about']"
+        routerLinkActive="router-link-active"
+        >About US</a
+      >
+      <a
+        mat-list-item
+        [routerLink]="['courses']"
+        routerLinkActive="router-link-active"
+        >Courses</a
+      >
+      <a
+        mat-list-item
+        [routerLink]="['contact-us']"
+        routerLinkActive="router-link-active"
+        >Contact Us</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>tuitionApp</span>
+      <span class="spacer"></span>
+      <ng-container *ngIf="!(isHandset$ | async)">
+        <a [routerLink]="['']" routerLinkActive="router-link-active">Home</a>
+        <a [routerLink]="['about']" routerLinkActive="router-link-active"
+          >About US</a
+        >
+        <a [routerLink]="['courses']" routerLinkActive="router-link-active"
+          >Courses</a
+        >
+        <a [routerLink]="['contact-us']" routerLinkActive="router-link-active"
+          >Contact Us</a
+        >
+      </ng-container>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
