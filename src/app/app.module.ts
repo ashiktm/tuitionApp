@@ -14,8 +14,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FooterComponent } from './footer/footer.component';
 import { CounterComponent } from './counter/counter.component';
+import { FromsComponent } from './froms/froms.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { CounterComponent } from './counter/counter.component';
     NavComponent,
     FooterComponent,
     CounterComponent,
+    FromsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +41,9 @@ import { CounterComponent } from './counter/counter.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
-
+    MatTooltipModule,
     AppRoutingModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -194,7 +194,30 @@ section {
   background: #212529;
   color: #f8f9fa;
 }
+.box1 {
+  max-width: 221px;
 
+  /* margin-top: 14px; */
+  position: relative;
+  top: 22px;
+}
+mat-card {
+  background-color: rgb(0 0 0 / 20%);
+  color: #f8f9fa;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 2.2rem;
+  border-radius: 20px;
+}
+.launch {
+  position: relative;
+  top: 20px;
+  background: #212529;
+  color: #f8f9fa;
+  font-size: 2.2rem;
+  /* max-width: 179px; */
+  padding: 18px 13px;
+}
 @media (max-width: 768px) {
   .about .content .learn-more-btn {
     margin: 0 48px 0 0;
